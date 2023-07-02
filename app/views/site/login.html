@@ -1,0 +1,22 @@
+{% extends "site/master.html" %} {% block content %}
+
+<h2>Login</h2>
+
+{% if logged_in %}
+    Você já está logado
+{% else %}    
+
+<form action="/login" method="post">
+    
+    <input type="text" name="email" value="avraham_peretz@hotmail.com" placeholder="seu email" class="form-control"><br>
+    {{ messages['email']['messages']|message(messages['email']['alert'])|raw }}<br>
+
+    <input type="password" name="password" value="123" placeholder="Sua senha" class="form-control"><br>
+    
+    {{ messages['password']['messages']|message(messages['password']['alert']|raw) }}<br>
+
+    <button type="submit" class="btn btn-info" id="btn-create">Logar</button>
+</form>
+
+{% endif %}
+{% endblock %}

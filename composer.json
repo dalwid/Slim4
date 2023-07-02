@@ -1,0 +1,22 @@
+{
+    "require": {
+        "slim/slim": "^4.11",
+        "slim/twig-view": "^3.3",
+        "slim/psr7": "^1.6",
+        "php-di/php-di": "^7.0",
+        "slim/http-cache": "^1.1",
+        "slim/csrf": "^1.3"
+    },
+    "autoload":{
+        "psr-4":{
+            "app\\": "app"
+        },
+        "files": [
+            "app/helpers/config.php",
+            "app/helpers/redirect.php",
+            "app/helpers/twig_variables.php",
+            "app/middlewares/logged.php"
+            
+        ]
+    }
+}
